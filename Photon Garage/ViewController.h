@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Spark-SDK.h"
 
-@interface ViewController : UIViewController
-
-
+@interface ViewController : UIViewController {
+    IBOutlet UILabel *connectedLabel;
+}
+@property (retain, nonatomic) IBOutlet UILabel *connectedLabel;
 @end
 
+SparkDevice *myPhoton;

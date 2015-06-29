@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Spark-SDK.h"
 
 @interface AppDelegate ()
 
@@ -40,6 +41,8 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[SparkCloud sharedInstance] logout];
+    NSLog(@"Logged out");
 }
 
 @end

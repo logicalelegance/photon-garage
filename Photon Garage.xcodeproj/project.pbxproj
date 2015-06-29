@@ -14,6 +14,7 @@
 		02312DBD1B40AE7100A49BDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02312DBC1B40AE7100A49BDF /* Images.xcassets */; };
 		02312DC01B40AE7100A49BDF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02312DBE1B40AE7100A49BDF /* LaunchScreen.xib */; };
 		02312DCC1B40AE7100A49BDF /* Photon_GarageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02312DCB1B40AE7100A49BDF /* Photon_GarageTests.m */; };
+		7ABF30D4E66F234B48736D3D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB1C1E8AC3E72335D465F8E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,10 @@
 		02312DC51B40AE7100A49BDF /* Photon GarageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photon GarageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02312DCA1B40AE7100A49BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02312DCB1B40AE7100A49BDF /* Photon_GarageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photon_GarageTests.m; sourceTree = "<group>"; };
+		02312DD51B40B0C800A49BDF /* libPods-Photon Garage-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Photon Garage-AFNetworking.a"; path = "Pods/../build/Debug-iphoneos/libPods-Photon Garage-AFNetworking.a"; sourceTree = "<group>"; };
+		23FED8DE0E8BD5AF34383248 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4FB1C1E8AC3E72335D465F8E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E0D493E4C67D350DE37D18 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABF30D4E66F234B48736D3D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,8 @@
 				02312DAE1B40AE7100A49BDF /* Photon Garage */,
 				02312DC81B40AE7100A49BDF /* Photon GarageTests */,
 				02312DAD1B40AE7100A49BDF /* Products */,
+				6807CBFCED968C42862FB868 /* Pods */,
+				EDF314C5188CB3D75958599B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +127,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6807CBFCED968C42862FB868 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92E0D493E4C67D350DE37D18 /* Pods.debug.xcconfig */,
+				23FED8DE0E8BD5AF34383248 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EDF314C5188CB3D75958599B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02312DD51B40B0C800A49BDF /* libPods-Photon Garage-AFNetworking.a */,
+				4FB1C1E8AC3E72335D465F8E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02312DCF1B40AE7100A49BDF /* Build configuration list for PBXNativeTarget "Photon Garage" */;
 			buildPhases = (
+				389E13E275874B7E33005B79 /* Check Pods Manifest.lock */,
 				02312DA81B40AE7100A49BDF /* Sources */,
 				02312DA91B40AE7100A49BDF /* Frameworks */,
 				02312DAA1B40AE7100A49BDF /* Resources */,
+				AC6D4F5295AE1D2353D9B7ED /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +196,7 @@
 				TargetAttributes = {
 					02312DAB1B40AE7100A49BDF = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = AS75QG7JHJ;
 					};
 					02312DC41B40AE7100A49BDF = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -213,6 +242,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		389E13E275874B7E33005B79 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC6D4F5295AE1D2353D9B7ED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		02312DA81B40AE7100A49BDF /* Sources */ = {
@@ -345,21 +407,39 @@
 		};
 		02312DD01B40AE7100A49BDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92E0D493E4C67D350DE37D18 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Photon Garage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		02312DD11B40AE7100A49BDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23FED8DE0E8BD5AF34383248 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Photon Garage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -416,6 +496,7 @@
 				02312DD11B40AE7100A49BDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02312DD21B40AE7100A49BDF /* Build configuration list for PBXNativeTarget "Photon GarageTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +505,7 @@
 				02312DD41B40AE7100A49BDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
