@@ -14,6 +14,7 @@
 
 @implementation ViewController
 @synthesize connectedLabel;
+@synthesize garageButton;
 
 - (void)loginAndEnumerate
 {
@@ -95,7 +96,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)testButton:(id)sender {
+- (IBAction)garageButtonDown:(id)sender {
+}
+- (IBAction)garageButtonUp:(id)sender {
     
     if (myPhoton == nil) {
         NSLog(@"myPhoton is nil!");

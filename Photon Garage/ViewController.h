@@ -11,8 +11,11 @@
 
 @interface ViewController : UIViewController {
     IBOutlet UILabel *connectedLabel;
+    IBOutlet UIButton *garageButton;
 }
 @property (retain, nonatomic) IBOutlet UILabel *connectedLabel;
+@property (retain, nonatomic) IBOutlet UIButton *garageButton;
+
 @end
 
 SparkDevice *myPhoton;

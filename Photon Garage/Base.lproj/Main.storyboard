@@ -22,13 +22,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNz-eB-9tT">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Open">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNz-eB-9tT">
+                                <rect key="frame" x="181" y="168" width="238" height="263"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                </accessibility>
+                                <state key="normal" image="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="Button Pressed"/>
+                                <state key="highlighted" image="Button Pressed"/>
                                 <connections>
-                                    <action selector="testButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8ZV-vB-WKU"/>
+                                    <action selector="garageButtonDown:" destination="vXZ-lx-hvc" eventType="touchDown" id="BsO-7c-Wly"/>
+                                    <action selector="garageButtonUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fe9-K7-Dpa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,4 +52,8 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Button" width="200" height="263"/>
+        <image name="Button Pressed" width="200" height="246"/>
+    </resources>
 </document>
