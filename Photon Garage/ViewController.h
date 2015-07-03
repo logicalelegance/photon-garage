@@ -12,7 +12,9 @@
 @interface ViewController : UIViewController {
     IBOutlet UILabel *connectedLabel;
     IBOutlet UIButton *garageButton;
+    IBOutlet UIActivityIndicatorView *connectionSpinner;
 }
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *connectionSpinner;
 @property (retain, nonatomic) IBOutlet UILabel *connectedLabel;
 @property (retain, nonatomic) IBOutlet UIButton *garageButton;
 

@@ -15,10 +15,9 @@
 @implementation ViewController
 @synthesize connectedLabel;
 @synthesize garageButton;
+@synthesize connectionSpinner;
 
-- (void)loginAndEnumerate
-{
-    
+- (void)loginAndEnumerate {
     [[SparkCloud sharedInstance] logout];
     myPhoton = nil;
     
@@ -43,6 +42,7 @@
                     [alert addAction:defaultAction];
                     [self presentViewController:alert animated:YES completion:nil];
                     NSLog(@"Error: %@", error);
+                    [connectedLabel setText:@"Not connected"];
                 }
                 
                 // search for a specific device by name
@@ -62,8 +62,15 @@
                     
                     [alert addAction:defaultAction];
                     [self presentViewController:alert animated:YES completion:nil];
+                    [connectedLabel setText:@"Connected (missing device)"];
+
                 } else {
-                    [connectedLabel setText:@"Connected"];
+                    
+                    if ([myPhoton connected]) {
+                        [connectedLabel setText:@"Connected"];
+                    } else {
+                        [connectedLabel setText:@"Connected (device offline)"];
+                    }
                 }
             }];
         }
@@ -77,17 +84,22 @@
                                                                   handler:^(UIAlertAction * action) {}];
             
             [alert addAction:defaultAction];
-            [self presentViewController:alert animated:YES completion:nil];
+                    [self presentViewController:alert animated:YES completion:nil];
             NSLog(@"Wrong credentials or no internet connectivity, please try again");
         }
     }];
+    [connectionSpinner stopAnimating];
+    [connectionSpinner setHidden:true];
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
     [connectedLabel setText:@"Not Connected"];
-    [self loginAndEnumerate];
+    [super viewDidLoad];
+    [connectionSpinner setHidden:false];
+
+    [connectionSpinner startAnimating];
+    [self performSelector:@selector(loginAndEnumerate) withObject:nil afterDelay:0.1];
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,6 +110,7 @@
 
 - (IBAction)garageButtonDown:(id)sender {
 }
+
 - (IBAction)garageButtonUp:(id)sender {
     
     if (myPhoton == nil) {

@@ -9,8 +9,11 @@
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
 #import "Spark-SDK.h"
-@interface InterfaceController : WKInterfaceController
+@interface InterfaceController : WKInterfaceController {
+    IBOutlet __weak WKInterfaceLabel *connectingLabel;
+}
 
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *connectingLabel;
 @end
 
 SparkDevice *myPhoton;

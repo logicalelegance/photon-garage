@@ -15,6 +15,7 @@
 
 
 @implementation InterfaceController
+@synthesize connectingLabel;
 
 - (void)loginAndEnumerate
 {
@@ -41,6 +42,11 @@
                 {
                     if ([device.name isEqualToString:@"garage_project"])
                         myPhoton = device;
+                    
+                    if ([myPhoton connected]) {
+                        [connectingLabel setText:@""];
+                        [connectingLabel setHidden:true];
+                    }
                 }
                 if (myPhoton == nil) {
                     NSLog(@"Couldn't find requested device");
