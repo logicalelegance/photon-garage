@@ -2,3 +2,6 @@
 # platform :ios, '6.0'
 pod "Spark-SDK"
 
+target 'Photon Garage WatchKit Extension', :exclusive => true do
+	pod "Spark-SDK"
+end

@@ -14,6 +14,14 @@
 		02312DBD1B40AE7100A49BDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02312DBC1B40AE7100A49BDF /* Images.xcassets */; };
 		02312DC01B40AE7100A49BDF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02312DBE1B40AE7100A49BDF /* LaunchScreen.xib */; };
 		02312DCC1B40AE7100A49BDF /* Photon_GarageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02312DCB1B40AE7100A49BDF /* Photon_GarageTests.m */; };
+		02D0A1E71B4213C1003EB5A8 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D0A1E61B4213C1003EB5A8 /* InterfaceController.m */; };
+		02D0A1EF1B4213C1003EB5A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D0A1EE1B4213C1003EB5A8 /* Images.xcassets */; };
+		02D0A1F31B4213C1003EB5A8 /* Photon Garage WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 02D0A1F21B4213C1003EB5A8 /* Photon Garage WatchKit App.app */; };
+		02D0A1FB1B4213C1003EB5A8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D0A1F91B4213C1003EB5A8 /* Interface.storyboard */; };
+		02D0A1FD1B4213C1003EB5A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D0A1FC1B4213C1003EB5A8 /* Images.xcassets */; };
+		02D0A2001B4213C1003EB5A8 /* Photon Garage WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02D0A1E01B4213C1003EB5A8 /* Photon Garage WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		02D0A2091B421B3E003EB5A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D0A2081B421B3E003EB5A8 /* libPods.a */; };
+		1D6F265809EFD1EB1F929447 /* libPods-Photon Garage WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D00AA94FD207F6CE75CAA /* libPods-Photon Garage WatchKit Extension.a */; };
 		7ABF30D4E66F234B48736D3D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB1C1E8AC3E72335D465F8E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +33,35 @@
 			remoteGlobalIDString = 02312DAB1B40AE7100A49BDF;
 			remoteInfo = "Photon Garage";
 		};
+		02D0A1F41B4213C1003EB5A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02312DA41B40AE7100A49BDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02D0A1F11B4213C1003EB5A8;
+			remoteInfo = "Photon Garage WatchKit App";
+		};
+		02D0A1FE1B4213C1003EB5A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02312DA41B40AE7100A49BDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02D0A1DF1B4213C1003EB5A8;
+			remoteInfo = "Photon Garage WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		02D0A2071B4213C1003EB5A8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				02D0A2001B4213C1003EB5A8 /* Photon Garage WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		02312DAC1B40AE7100A49BDF /* Photon Garage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photon Garage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,9 +78,24 @@
 		02312DCA1B40AE7100A49BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02312DCB1B40AE7100A49BDF /* Photon_GarageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photon_GarageTests.m; sourceTree = "<group>"; };
 		02312DD51B40B0C800A49BDF /* libPods-Photon Garage-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Photon Garage-AFNetworking.a"; path = "Pods/../build/Debug-iphoneos/libPods-Photon Garage-AFNetworking.a"; sourceTree = "<group>"; };
+		02B16BDD1B423060005E2342 /* Photon Garage WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Photon Garage WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		02D0A1E01B4213C1003EB5A8 /* Photon Garage WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Photon Garage WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02D0A1E31B4213C1003EB5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02D0A1E41B4213C1003EB5A8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		02D0A1E51B4213C1003EB5A8 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		02D0A1E61B4213C1003EB5A8 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		02D0A1EE1B4213C1003EB5A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		02D0A1F21B4213C1003EB5A8 /* Photon Garage WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photon Garage WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02D0A1F81B4213C1003EB5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02D0A1FA1B4213C1003EB5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		02D0A1FC1B4213C1003EB5A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		02D0A2081B421B3E003EB5A8 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		0B90BF54D66AEAFCEB3323A9 /* Pods-Photon Garage WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photon Garage WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Photon Garage WatchKit Extension/Pods-Photon Garage WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		23FED8DE0E8BD5AF34383248 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		365DA444B7778C2FB510A4F6 /* Pods-Photon Garage WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photon Garage WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photon Garage WatchKit Extension/Pods-Photon Garage WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		4FB1C1E8AC3E72335D465F8E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E0D493E4C67D350DE37D18 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EF8D00AA94FD207F6CE75CAA /* libPods-Photon Garage WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Photon Garage WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +114,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02D0A1DD1B4213C1003EB5A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02D0A2091B421B3E003EB5A8 /* libPods.a in Frameworks */,
+				1D6F265809EFD1EB1F929447 /* libPods-Photon Garage WatchKit Extension.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +131,8 @@
 			children = (
 				02312DAE1B40AE7100A49BDF /* Photon Garage */,
 				02312DC81B40AE7100A49BDF /* Photon GarageTests */,
+				02D0A1E11B4213C1003EB5A8 /* Photon Garage WatchKit Extension */,
+				02D0A1F61B4213C1003EB5A8 /* Photon Garage WatchKit App */,
 				02312DAD1B40AE7100A49BDF /* Products */,
 				6807CBFCED968C42862FB868 /* Pods */,
 				EDF314C5188CB3D75958599B /* Frameworks */,
@@ -82,6 +144,8 @@
 			children = (
 				02312DAC1B40AE7100A49BDF /* Photon Garage.app */,
 				02312DC51B40AE7100A49BDF /* Photon GarageTests.xctest */,
+				02D0A1E01B4213C1003EB5A8 /* Photon Garage WatchKit Extension.appex */,
+				02D0A1F21B4213C1003EB5A8 /* Photon Garage WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,11 +191,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		02D0A1E11B4213C1003EB5A8 /* Photon Garage WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				02B16BDD1B423060005E2342 /* Photon Garage WatchKit Extension.entitlements */,
+				02D0A1E51B4213C1003EB5A8 /* InterfaceController.h */,
+				02D0A1E61B4213C1003EB5A8 /* InterfaceController.m */,
+				02D0A1EE1B4213C1003EB5A8 /* Images.xcassets */,
+				02D0A1E21B4213C1003EB5A8 /* Supporting Files */,
+			);
+			path = "Photon Garage WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		02D0A1E21B4213C1003EB5A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02D0A1E31B4213C1003EB5A8 /* Info.plist */,
+				02D0A1E41B4213C1003EB5A8 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02D0A1F61B4213C1003EB5A8 /* Photon Garage WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				02D0A1F91B4213C1003EB5A8 /* Interface.storyboard */,
+				02D0A1FC1B4213C1003EB5A8 /* Images.xcassets */,
+				02D0A1F71B4213C1003EB5A8 /* Supporting Files */,
+			);
+			path = "Photon Garage WatchKit App";
+			sourceTree = "<group>";
+		};
+		02D0A1F71B4213C1003EB5A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02D0A1F81B4213C1003EB5A8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6807CBFCED968C42862FB868 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				92E0D493E4C67D350DE37D18 /* Pods.debug.xcconfig */,
 				23FED8DE0E8BD5AF34383248 /* Pods.release.xcconfig */,
+				365DA444B7778C2FB510A4F6 /* Pods-Photon Garage WatchKit Extension.debug.xcconfig */,
+				0B90BF54D66AEAFCEB3323A9 /* Pods-Photon Garage WatchKit Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -139,8 +244,10 @@
 		EDF314C5188CB3D75958599B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02D0A2081B421B3E003EB5A8 /* libPods.a */,
 				02312DD51B40B0C800A49BDF /* libPods-Photon Garage-AFNetworking.a */,
 				4FB1C1E8AC3E72335D465F8E /* libPods.a */,
+				EF8D00AA94FD207F6CE75CAA /* libPods-Photon Garage WatchKit Extension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,10 +264,12 @@
 				02312DA91B40AE7100A49BDF /* Frameworks */,
 				02312DAA1B40AE7100A49BDF /* Resources */,
 				AC6D4F5295AE1D2353D9B7ED /* Copy Pods Resources */,
+				02D0A2071B4213C1003EB5A8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				02D0A1FF1B4213C1003EB5A8 /* PBXTargetDependency */,
 			);
 			name = "Photon Garage";
 			productName = "Photon Garage";
@@ -185,6 +294,41 @@
 			productReference = 02312DC51B40AE7100A49BDF /* Photon GarageTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		02D0A1DF1B4213C1003EB5A8 /* Photon Garage WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02D0A2061B4213C1003EB5A8 /* Build configuration list for PBXNativeTarget "Photon Garage WatchKit Extension" */;
+			buildPhases = (
+				7048B1BEC13E53BD6CA9C7A6 /* Check Pods Manifest.lock */,
+				02D0A1DC1B4213C1003EB5A8 /* Sources */,
+				02D0A1DD1B4213C1003EB5A8 /* Frameworks */,
+				02D0A1DE1B4213C1003EB5A8 /* Resources */,
+				8B2C3F47AE79B654236B0A84 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02D0A1F51B4213C1003EB5A8 /* PBXTargetDependency */,
+			);
+			name = "Photon Garage WatchKit Extension";
+			productName = "Photon Garage WatchKit Extension";
+			productReference = 02D0A1E01B4213C1003EB5A8 /* Photon Garage WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		02D0A1F11B4213C1003EB5A8 /* Photon Garage WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02D0A2051B4213C1003EB5A8 /* Build configuration list for PBXNativeTarget "Photon Garage WatchKit App" */;
+			buildPhases = (
+				02D0A1F01B4213C1003EB5A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Photon Garage WatchKit App";
+			productName = "Photon Garage WatchKit App";
+			productReference = 02D0A1F21B4213C1003EB5A8 /* Photon Garage WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +345,19 @@
 					02312DC41B40AE7100A49BDF = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = 02312DAB1B40AE7100A49BDF;
+					};
+					02D0A1DF1B4213C1003EB5A8 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = AS75QG7JHJ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					02D0A1F11B4213C1003EB5A8 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = AS75QG7JHJ;
 					};
 				};
 			};
@@ -219,6 +376,8 @@
 			targets = (
 				02312DAB1B40AE7100A49BDF /* Photon Garage */,
 				02312DC41B40AE7100A49BDF /* Photon GarageTests */,
+				02D0A1DF1B4213C1003EB5A8 /* Photon Garage WatchKit Extension */,
+				02D0A1F11B4213C1003EB5A8 /* Photon Garage WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -241,6 +400,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02D0A1DE1B4213C1003EB5A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02D0A1F31B4213C1003EB5A8 /* Photon Garage WatchKit App.app in Resources */,
+				02D0A1EF1B4213C1003EB5A8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02D0A1F01B4213C1003EB5A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02D0A1FB1B4213C1003EB5A8 /* Interface.storyboard in Resources */,
+				02D0A1FD1B4213C1003EB5A8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -257,6 +434,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7048B1BEC13E53BD6CA9C7A6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B2C3F47AE79B654236B0A84 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photon Garage WatchKit Extension/Pods-Photon Garage WatchKit Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AC6D4F5295AE1D2353D9B7ED /* Copy Pods Resources */ = {
@@ -295,6 +502,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02D0A1DC1B4213C1003EB5A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02D0A1E71B4213C1003EB5A8 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -302,6 +517,16 @@
 			isa = PBXTargetDependency;
 			target = 02312DAB1B40AE7100A49BDF /* Photon Garage */;
 			targetProxy = 02312DC61B40AE7100A49BDF /* PBXContainerItemProxy */;
+		};
+		02D0A1F51B4213C1003EB5A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02D0A1F11B4213C1003EB5A8 /* Photon Garage WatchKit App */;
+			targetProxy = 02D0A1F41B4213C1003EB5A8 /* PBXContainerItemProxy */;
+		};
+		02D0A1FF1B4213C1003EB5A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02D0A1DF1B4213C1003EB5A8 /* Photon Garage WatchKit Extension */;
+			targetProxy = 02D0A1FE1B4213C1003EB5A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -320,6 +545,14 @@
 				02312DBF1B40AE7100A49BDF /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		02D0A1F91B4213C1003EB5A8 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02D0A1FA1B4213C1003EB5A8 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,7 +575,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -385,6 +619,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -477,6 +712,96 @@
 			};
 			name = Release;
 		};
+		02D0A2011B4213C1003EB5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 365DA444B7778C2FB510A4F6 /* Pods-Photon Garage WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Photon Garage WatchKit Extension/Photon Garage WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Spark-SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+				);
+				INFOPLIST_FILE = "Photon Garage WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		02D0A2021B4213C1003EB5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B90BF54D66AEAFCEB3323A9 /* Pods-Photon Garage WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Photon Garage WatchKit Extension/Photon Garage WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Spark-SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+				);
+				INFOPLIST_FILE = "Photon Garage WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		02D0A2031B4213C1003EB5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Photon_Garage_WatchKit_Extension;
+				INFOPLIST_FILE = "Photon Garage WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		02D0A2041B4213C1003EB5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IBSC_MODULE = Photon_Garage_WatchKit_Extension;
+				INFOPLIST_FILE = "Photon Garage WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -503,6 +828,24 @@
 			buildConfigurations = (
 				02312DD31B40AE7100A49BDF /* Debug */,
 				02312DD41B40AE7100A49BDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02D0A2051B4213C1003EB5A8 /* Build configuration list for PBXNativeTarget "Photon Garage WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02D0A2031B4213C1003EB5A8 /* Debug */,
+				02D0A2041B4213C1003EB5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02D0A2061B4213C1003EB5A8 /* Build configuration list for PBXNativeTarget "Photon Garage WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02D0A2011B4213C1003EB5A8 /* Debug */,
+				02D0A2021B4213C1003EB5A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

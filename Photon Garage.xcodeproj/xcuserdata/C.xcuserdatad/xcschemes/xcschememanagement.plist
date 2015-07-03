@@ -4,6 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Glance - Photon Garage WatchKit App.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>Notification - Photon Garage WatchKit App.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Photon Garage WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Photon Garage.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +37,11 @@
 			<true/>
 		</dict>
 		<key>02312DC41B40AE7100A49BDF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>02D0A1F11B4213C1003EB5A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

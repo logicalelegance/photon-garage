@@ -9,6 +9,26 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Photon Garage WatchKit Extension-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Photon Garage WatchKit Extension-Spark-SDK-Spark-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Photon Garage WatchKit Extension-Spark-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Photon Garage WatchKit Extension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Spark-SDK-Spark-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>72612B874C6D7779E047B330</key>
+		<key>1DCC37353038283638C1B0B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>919C51680A212818763E91DD</key>
+		<key>2E414928008ED4B6CA1C4742</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF4AE3B281F643A9DC8B2097</key>
+		<key>75486503CA8A6E9B34CC1544</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F18F649C79BB404A962BB330</key>
+		<key>A2E9F690DA4B06094FEA96C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE2283377A91DD3ED2AA462B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFFD9A5637D1070D0E687A69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECABE0CE2023F30543CFC2AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5860780C36A36B17819720B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
