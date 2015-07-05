@@ -21,6 +21,7 @@
                     </items>
                     <connections>
                         <outlet property="connectingLabel" destination="I1c-dR-5EP" id="H9x-XV-pbg"/>
+                        <outlet property="garageButton" destination="0vt-BC-Hp5" id="tUU-lV-lWa"/>
                     </connections>
                 </controller>
             </objects>

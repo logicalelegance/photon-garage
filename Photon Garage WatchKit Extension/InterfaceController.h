@@ -11,9 +11,12 @@
 #import "Spark-SDK.h"
 @interface InterfaceController : WKInterfaceController {
     IBOutlet __weak WKInterfaceLabel *connectingLabel;
+    IBOutlet __weak WKInterfaceButton *garageButton;
 }
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *connectingLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *garageButton;
 @end
 
 SparkDevice *myPhoton;
+NSTimer *updateTimer;

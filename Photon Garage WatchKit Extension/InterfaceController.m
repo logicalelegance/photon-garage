@@ -16,6 +16,7 @@
 
 @implementation InterfaceController
 @synthesize connectingLabel;
+@synthesize garageButton;
 
 - (void)loginAndEnumerate
 {
@@ -69,12 +70,35 @@
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
     [self loginAndEnumerate];
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(checkDoorStatus) userInfo:nil repeats:YES];
 }
 
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
     [[SparkCloud sharedInstance] logout];
+}
+
+- (void)checkDoorStatus
+{
+    if ((myPhoton == nil) || ([myPhoton connected] == false)) {
+        return;
+    }
+    [myPhoton getVariable:@"doorOpen" completion:^(id result, NSError *error) {
+        if (!error) {
+            NSNumber *val = (NSNumber *)result;
+            NSLog(@"Garage door is %s", val.intValue ? "open" : "closed");
+            if (val.intValue == 1) {
+                [garageButton setBackgroundImageNamed:@"Button-open"];
+            } else {
+                [garageButton setBackgroundImageNamed:@"Button"];
+            }
+        }
+        else {
+            NSLog(@"Failed to read garage status");
+        }
+    }
+     ];
 }
 
 - (IBAction)garageButton:(id)sender {
