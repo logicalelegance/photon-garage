@@ -20,4 +20,5 @@
 
 @end
 
+NSTimer *updateTimer;
 SparkDevice *myPhoton;

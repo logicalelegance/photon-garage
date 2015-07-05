@@ -100,6 +100,33 @@
 
     [connectionSpinner startAnimating];
     [self performSelector:@selector(loginAndEnumerate) withObject:nil afterDelay:0.1];
+    
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(checkDoorStatus) userInfo:nil repeats:YES];
+
+}
+
+- (void)checkDoorStatus
+{
+    if ((myPhoton == nil) || ([myPhoton connected] == false)) {
+        return;
+    }
+    [myPhoton getVariable:@"doorOpen" completion:^(id result, NSError *error) {
+        if (!error) {
+            NSNumber *val = (NSNumber *)result;
+            NSLog(@"Garage door is %s", val.intValue ? "open" : "closed");
+            if (val.intValue == 1) {
+                UIImage *openImage = [UIImage imageNamed:@"Button-open"];
+                [garageButton setImage:openImage forState:UIControlStateNormal];
+            } else {
+                UIImage *closedImage = [UIImage imageNamed:@"Button"];
+                [garageButton setImage:closedImage forState:UIControlStateNormal];
+            }
+        }
+        else {
+            NSLog(@"Failed to read garage status");
+        }
+    }
+    ];
 }
 
 - (void)didReceiveMemoryWarning

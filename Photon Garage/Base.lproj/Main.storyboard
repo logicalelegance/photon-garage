@@ -16,11 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNz-eB-9tT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNz-eB-9tT">
                                 <rect key="frame" x="181" y="168" width="238" height="263"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="263" id="2gk-VK-sVv"/>
+                                    <constraint firstAttribute="width" constant="238" id="9QK-ID-U0Z"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="263" id="AUS-Z4-Cz7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="238" id="mXm-UV-O4q"/>
+                                </constraints>
                                 <state key="normal" image="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -37,7 +43,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Connected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsS-jJ-VOb">
                                 <rect key="frame" x="28" y="21" width="125" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -50,6 +56,7 @@
                     <connections>
                         <outlet property="connectedLabel" destination="hsS-jJ-VOb" id="369-WO-Dpe"/>
                         <outlet property="connectionSpinner" destination="fl4-i0-0O7" id="nHn-yR-oNw"/>
+                        <outlet property="garageButton" destination="PNz-eB-9tT" id="O6G-D1-eDb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
