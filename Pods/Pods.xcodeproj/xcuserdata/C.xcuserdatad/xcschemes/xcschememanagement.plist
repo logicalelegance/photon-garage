@@ -8,81 +8,97 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>Pods-Photon Garage WatchKit Extension-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Pods-Photon Garage WatchKit Extension-Spark-SDK-Spark-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Pods-Photon Garage WatchKit Extension-Spark-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Pods-Photon Garage WatchKit Extension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Pods-Spark-SDK-Spark-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>Pods-Spark-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1DCC37353038283638C1B0B9</key>
+		<key>0ADBA4B1BA25317518A503EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E414928008ED4B6CA1C4742</key>
+		<key>5A23224FF5987509415C4EC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75486503CA8A6E9B34CC1544</key>
+		<key>883D59634003003DB52280CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A2E9F690DA4B06094FEA96C7</key>
+		<key>A10C604CD45D2287A787F509</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE2283377A91DD3ED2AA462B</key>
+		<key>A76DFEE4503F8D81E18BAD1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DFFD9A5637D1070D0E687A69</key>
+		<key>D6D2E0D859E765B16120778B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ECABE0CE2023F30543CFC2AA</key>
+		<key>F9DD1AA29B8EA25604CD181E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5860780C36A36B17819720B</key>
+		<key>FF99ED5546B89E2FD1FCBBE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
