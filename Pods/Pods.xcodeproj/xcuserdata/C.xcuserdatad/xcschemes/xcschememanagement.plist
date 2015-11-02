@@ -8,97 +8,61 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-Photon Garage WatchKit Extension-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Pods-Photon Garage WatchKit Extension-Spark-SDK-Spark-SDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods-Photon Garage WatchKit Extension-Spark-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods-Photon Garage WatchKit Extension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>Pods-Spark-SDK-Spark-SDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>Pods-Spark-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0ADBA4B1BA25317518A503EC</key>
+		<key>13B7C167C9F42E567298DF1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5A23224FF5987509415C4EC0</key>
+		<key>3223E093CC7096CA1D0E7DAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>883D59634003003DB52280CB</key>
+		<key>8A208F3D5E4C66F3FA3CC22E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A10C604CD45D2287A787F509</key>
+		<key>902F99BF03C8D976DB7E0BF4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A76DFEE4503F8D81E18BAD1E</key>
+		<key>C155D1EA27561A0BE858413C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6D2E0D859E765B16120778B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F9DD1AA29B8EA25604CD181E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FF99ED5546B89E2FD1FCBBE5</key>
+		<key>CD36520CA8EBDCA5DC57A310</key>
 		<dict>
 			<key>primary</key>
 			<true/>

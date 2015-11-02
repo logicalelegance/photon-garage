@@ -302,7 +302,6 @@
 				02D0A1DC1B4213C1003EB5A8 /* Sources */,
 				02D0A1DD1B4213C1003EB5A8 /* Frameworks */,
 				02D0A1DE1B4213C1003EB5A8 /* Resources */,
-				8B2C3F47AE79B654236B0A84 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -449,21 +448,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8B2C3F47AE79B654236B0A84 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photon Garage WatchKit Extension/Pods-Photon Garage WatchKit Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AC6D4F5295AE1D2353D9B7ED /* Copy Pods Resources */ = {

@@ -76,6 +76,7 @@
         {
             if (params[@"last_heard"])
             {
+                // TODO: add to utils class as POSIX time to NSDate
                 NSString *dateString = params[@"last_heard"];// "2015-04-18T08:42:22.127Z"
                 NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
                 [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
@@ -326,7 +327,7 @@
 {
     NSString *desc = [NSString stringWithFormat:@"<SparkDevice 0x%lx, type: %@, id: %@, name: %@, connected: %@, variables: %@, functions: %@, version: %@, requires update: %@, last app: %@, last heard: %@>",
                       (unsigned long)self,
-                      /*(self.type == SparkDeviceTypeCore) ? @"Spark Core" : @"Spark Photon",*/ @"Spark device",
+                      (self.type == SparkDeviceTypeCore) ? @"Core" : @"Photon",
                       self.id,
                       self.name,
                       (self.connected) ? @"true" : @"false",
@@ -453,6 +454,17 @@
     {
         self.flashingTimeLeft = 0;
     }
+}
+
+
+-(id)subscribeToEventsWithPrefix:(NSString *)eventNamePrefix handler:(SparkEventHandler)eventHandler
+{
+    return [[SparkCloud sharedInstance] subscribeToDeviceEventsWithPrefix:eventNamePrefix deviceID:self.id handler:eventHandler];
+}
+
+-(void)unsubscribeFromEventWithID:(id)eventListenerID
+{
+    [[SparkCloud sharedInstance] unsubscribeFromEventWithID:eventListenerID];
 }
 
 

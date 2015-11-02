@@ -1,12 +1,9 @@
 <p align="center" >
 <img src="http://oi60.tinypic.com/116jd51.jpg" alt="Particle" title="Particle">
 </p>
+# Particle iOS Cloud SDK
+[![Build Status](https://api.travis-ci.org/spark/spark-sdk-ios.svg)](https://travis-ci.org/spark/spark-sdk-ios) [![license](https://img.shields.io/hexpm/l/plug.svg)](https://github.com/spark/spark-sdk-ios/blob/master/LICENSE) [![version](https://img.shields.io/badge/cocoapods-0.3.0-green.svg)](https://github.com/spark/spark-sdk-ios/blob/master/CHANGELOG.md)
 
-<!---
-(Update link)
-[![Build Status](https://travis-ci.org/AFNetworking/AFNetworking.svg)](https://travis-ci.org/Spark-SDK/Spark-SDK)
--->
-# Particle (_formerly Spark_) iOS Cloud SDK
 Particle iOS Cloud SDK enables iOS apps to interact with Particle-powered connected products via the Particle Cloud. It’s an easy-to-use wrapper for Particle REST API. The Cloud SDK will allow you to:
 
 - Manage user sessions for the Particle Cloud (access tokens, encrypted session management)
@@ -14,7 +11,7 @@ Particle iOS Cloud SDK enables iOS apps to interact with Particle-powered connec
 - Get a list of instances of user's Particle devices
 - Read variables from devices
 - Invoke functions on devices
-- Publish events from the mobile app and subscribe to events coming from devices *(Coming Soon)* 
+- Publish events from the mobile app and subscribe to events coming from devices *(New!)*
 
 All cloud operations take place asynchronously and use the well-known completion blocks (closures for swift) design pattern for reporting results allowing you to build beautiful responsive apps for your Particle products and projects. 
 iOS Cloud SDK is implemented as an open-source Cocoapod library. See [Installation](#installation) section for more details. It works well for both Objective-C and [Swift](#support-for-swift-projects) projects.
@@ -26,7 +23,7 @@ Code currently refers to `SparkCloud` and `SparkDevice`, this will soon be repla
 
 **Beta notice**
 
-This SDK is still under development and is currently released as Beta, although tested, bugs and issues may be present, some code might require cleanups. 
+This SDK is still under development and is currently released as Beta, although tested, bugs and issues may be present, some code might require cleanups. In addition, as long as version 1.0 was not released, we cannot gurantee that API calls will not break from one Cloud SDK version to the next. Be sure to consult the [Change Log](https://github.com/spark/spark-sdk-ios/blob/master/CHANGELOG.md) for any breaking changes / additions to the SDK.
 
 ## Getting Started
 
@@ -37,6 +34,8 @@ This SDK is still under development and is currently released as Beta, although 
 ## Usage
 
 Cloud SDK usage involves two basic classes: first is `SparkCloud` which is a singleton object that enables all basic cloud operations such as user authentication, device listing, claiming etc. Second class is `SparkDevice` which is an instance represnting a claimed device in the current user session. Each object enables device-specific operation such as: getting its info, invoking functions and reading variables from it. 
+
+### Common tasks
 
 Here are few examples for the most common use cases to get your started:
 
@@ -235,6 +234,143 @@ Also clears user session and access token
 ```swift
 SparkCloud.sharedInstance().logout()
 ```
+
+### Events sub-system
+
+You can make an API call that will open a stream of [Server-Sent Events (SSEs)](http://www.w3.org/TR/eventsource/). You will make one API call that opens a connection to the Particle Cloud. That connection will stay open, unlike normal HTTP calls which end quickly. Very little data will come to you across the connection unless your Particle device publishes an event, at which point you will be immediately notified. In each case, the event name filter is `eventNamePrefix` and is optional. When specifying an event name filter, published events will be limited to those events with names that begin with the specified string. For example, specifying an event name filter of 'temp' will return events with names 'temp' and 'temperature'.
+
+#### Subscribe to events
+
+Subscribe to the firehose of public events, plus private events published by devices one owns:
+
+```objc
+// The event handler:
+SparkEventHandler handler = ^(SparkEvent *event, NSError *error) {
+        if (!error)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"Got Event %@ with data: %@",event.event,event.data);
+            });
+        }
+        else
+        {
+            NSLog(@"Error occured: %@",error.localizedDescription);
+        }
+        
+    };
+    
+// This line actually subscribes to the event stream:
+id eventListenerID = [[SparkCloud sharedInstance] subscribeToAllEventsWithPrefix:@"temp" handler:handler];
+```
+
+*Note:* specifying nil or empty string in the eventNamePrefix parameter will subscribe to ALL events (lots of data!)
+You can have multiple handlers per event name and/or same handler per multiple events names.
+
+Subscribe to all events, public and private, published by devices the user owns:
+
+```objc
+id eventListenerID = [[SparkCloud sharedInstance] subscribeToMyDevicesEventsWithPrefix:@"temp" handler:handler];
+```
+
+Subscribe to events from one specific device (by deviceID, second parameter). If the API user owns the device, then he'll receive all events, public and private, published by that device. If the API user does not own the device he will only receive public events.
+
+```objc
+id eventListenerID = [[SparkCloud sharedInstance] subscribeToDeviceEventsWithPrefix:@"temp" deviceID:@"53ff6c065075535119511687" handler:handler];
+```
+
+other option is calling same method via the `SparkDevice` instance:
+
+```objc
+id eventListenerID = [device subscribeToEventsWithPrefix:@"temp" handler:handler];
+```
+
+this guarantees that private events will be received since having access device instance in your app signifies that the user has this device claimed.
+
+#### Unsubscribing from events
+
+Very straightforward. Keep the id object the subscribe method returned and use it as parameter to call the unsubscribe method:
+
+```objc
+[[SparkCloud sharedInstance] unsubscribeFromEventWithID:self.eventListenerID];
+```
+
+or via the `SparkDevice` instance (if applicable):
+
+```objc
+[device unsubscribeFromEventWithID:self.eventListenerID];
+```
+
+#### Publishing an event
+
+You can also publish an event from your app to the Particle Cloud:
+
+**Objective-C**
+
+```objc
+[[SparkCloud sharedInstance] publishEventWithName:@"event_from_app" data:@"event_payload" isPrivate:NO ttl:60 completion:^(NSError *error) {
+    if (error)
+    {
+        NSLog(@"Error publishing event: %@",error.localizedDescription);
+    }
+}];
+```
+
+**Swift**
+
+```swift
+SparkCloud.sharedInstance().publishEventWithName("event_from_app", data: "event_payload", isPrivate: false, ttl: 60, completion: { (error:NSError!) -> Void in
+    if let e = error
+    {
+        println("Error publishing event" + e.localizedDescription)
+    }
+})
+```
+
+### OAuth client configuration
+
+If you're creating an app you're required to provide the `SparkCloud` class with OAuth clientId and secret. 
+Those are used to identify users coming from your specific app to the Particle Cloud.
+Please follow the procedure decribed [in our guide](https://docs.particle.io/guide/how-to-build-a-product/web-app/#creating-an-oauth-client) to create those strings, 
+then in your `AppDelegate` class you can supply those credentials by setting the following properties in `SparkCloud` singleton:
+
+```objc
+@property (nonatomic, strong) NSString *OAuthClientId;
+@property (nonatomic, strong) NSString *OAuthClientSecret;
+```
+
+**Important**
+Those credentials should be kept as secret. We recommend the use of [Cocoapods-keys plugin](https://github.com/orta/cocoapods-keys) for cocoapods 
+(which you have to use anyways to install the SDK). It is essentially a key value store for enviroment and application keys.
+It's a good security practice to keep production keys out of developer hands. CocoaPods-keys makes it easy to have per-user config settings stored securely in the developer's keychain, 
+and not in the application source. It is a plugin that once installed will run on every pod install or pod update.
+
+After adding the following additional lines your project `Podfile`:
+```ruby
+plugin 'cocoapods-keys', {
+    :project => "YourAppName",
+    :keys => [
+        "OAuthClientId",
+        "OAuthSecret"
+    ]}
+```
+
+go to your project folder in shell and run `pod install` - it will now ask you for "OAuthClientId", "OAuthSecret" - you can copy/paste the generated keys there
+and from that point on you can feed those keys into `SparkCloud` by adding this code to your AppDelegate `didFinishLaunchingWithOptions` function which gets called
+when your app starts:
+
+*Swift example code*
+
+```swift
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    var keys = YourappnameKeys()
+    SparkCloud.sharedInstance().OAuthClientId = keys.oAuthClientId()
+    SparkCloud.sharedInstance().OAuthClientSecret = keys.oAuthSecret()
+
+    return true
+}
+```
+
+Be sure to replace `YourAppName` with your project name.
 
 ### Additional reference
 For additional reference check out the [Reference in Cocoadocs website](http://cocoadocs.org/docsets/Spark-SDK/) for full coverage of `SparkDevice` and `SparkCloud` functions and member variables. In addition you can consult the javadoc style comments in `SparkCloud.h` and `SparkDevice.h` for each public method. If Particle iOS Cloud SDK is integrated in your XCode project you should be able to press `Esc` to get an auto-complete hints for each cloud and device method.
